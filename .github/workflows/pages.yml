@@ -36,6 +36,11 @@ jobs:
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
+        
+      - name: Check HTML
+        uses: chabad360/htmlproofer@master
+        with:
+          directory: "./"
 
   # Deployment job
   deploy:

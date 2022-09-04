@@ -38,15 +38,7 @@ jobs:
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
-     
-  test:
-   runs-on: ubuntu-latest
-   steps:
-     - name: Check HTML
-       uses: chabad360/htmlproofer@master
-       with:
-        source: ./
-
+  
   # Deployment job
   deploy:
     environment:
